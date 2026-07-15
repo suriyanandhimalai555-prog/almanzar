@@ -32,7 +32,8 @@ const AppRouter = () => {
           <Route path="/distributor/api-logs" element={<DistributorAPILogs />} />
           <Route path="/distributor/developer" element={<DistributorDeveloper />} />
         </Route>
-
+        
+        <Route path="/" element={<Navigate to="/distributor/login" />} />
       </Routes>
     </Router>
   );
