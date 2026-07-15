@@ -1,12 +1,12 @@
 import React from 'react';
 import DistributorDashboardCom from '../../components/distributor/home/DistributorDashboardCom';
-import DashboardLayout from '../../DashboardLayout';
+import DistributorDashboardLayout from "../../layouts/DistributorDashboardLayout"
 
 const DistributorDashboard = () => {
   return (
-    <DashboardLayout>
+    <DistributorDashboardLayout>
       <DistributorDashboardCom />
-    </DashboardLayout>
+    </DistributorDashboardLayout>
   );
 };
 

@@ -1,11 +1,12 @@
 import DistributorAPIKeyCom from "../../components/distributor/apikey/DistributorAPIKeyCom"
-import DashboardLayout from "../../DashboardLayout"
+import DistributorDashboardLayout from "../../layouts/DistributorDashboardLayout"
+
 
 const DistributorAPIKey = () => {
   return (
-    <DashboardLayout>
+    <DistributorDashboardLayout>
       <DistributorAPIKeyCom />
-    </DashboardLayout>
+    </DistributorDashboardLayout>
   )
 }
 

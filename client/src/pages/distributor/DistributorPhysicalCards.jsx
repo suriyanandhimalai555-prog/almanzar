@@ -1,11 +1,11 @@
 import DistributorPhysicalCardsCom from "../../components/distributor/physicalcards/DistributorPhysicalCardsCom"
-import DashboardLayout from "../../DashboardLayout"
+import DistributorDashboardLayout from "../../layouts/DistributorDashboardLayout"
 
 const DistributorPhysicalCards = () => {
   return (
-    <DashboardLayout>
+    <DistributorDashboardLayout>
       <DistributorPhysicalCardsCom />
-    </DashboardLayout>
+    </DistributorDashboardLayout>
   )
 }
 

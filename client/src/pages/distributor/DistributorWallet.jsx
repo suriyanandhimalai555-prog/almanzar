@@ -1,12 +1,12 @@
 import DistributorWalletCom from "../../components/distributor/wallet/DistributorWalletCom"
-import DashboardLayout from "../../DashboardLayout"
+import DistributorDashboardLayout from "../../layouts/DistributorDashboardLayout"
 
 
 const DistributorWallet = () => {
     return (
-        <DashboardLayout>
+        <DistributorDashboardLayout>
             <DistributorWalletCom />
-        </DashboardLayout>
+        </DistributorDashboardLayout>
     )
 }
 

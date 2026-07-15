@@ -1,11 +1,11 @@
 import DistributorMyUserCom from '../../components/distributor/myusers/DistributorMyUserCom'
-import DashboardLayout from '../../DashboardLayout'
+import DistributorDashboardLayout from "../../layouts/DistributorDashboardLayout"
 
 const DistributorMyUser = () => {
   return (
-    <DashboardLayout>
+    <DistributorDashboardLayout>
       <DistributorMyUserCom />
-    </DashboardLayout>
+    </DistributorDashboardLayout>
   )
 }
 

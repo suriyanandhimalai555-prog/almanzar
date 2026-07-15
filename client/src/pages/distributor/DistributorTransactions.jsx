@@ -1,12 +1,12 @@
 import DistributorTransactionsCom from "../../components/distributor/transactions/DistributorTransactionsCom"
-import DashboardLayout from "../../DashboardLayout"
+import DistributorDashboardLayout from "../../layouts/DistributorDashboardLayout"
 
 
 const DistributorTransactions = () => {
     return (
-        <DashboardLayout>
+        <DistributorDashboardLayout>
             <DistributorTransactionsCom />
-        </DashboardLayout>
+        </DistributorDashboardLayout>
     )
 }
 

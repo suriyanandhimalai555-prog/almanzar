@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Sidebar from './components/distributor/Sidebar';
-import Navbar from './components/distributor/Navbar';
+import Sidebar from '../components/distributor/Sidebar';
+import Navbar from '../components/distributor/Navbar';
 
-const DashboardLayout = ({ children }) => {
+const DistributorDashboardLayout = ({ children }) => {
   // State to manage mobile sidebar visibility
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -29,4 +29,4 @@ const DashboardLayout = ({ children }) => {
   );
 };
 
-export default DashboardLayout;
+export default DistributorDashboardLayout;

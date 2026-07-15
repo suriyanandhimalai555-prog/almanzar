@@ -1,12 +1,12 @@
 import DistributorAPILogsCom from "../../components/distributor/apilogs/DistributorAPILogsCom"
-import DashboardLayout from "../../DashboardLayout"
+import DistributorDashboardLayout from "../../layouts/DistributorDashboardLayout"
 
 
 const DistributorAPILogs = () => {
     return (
-        <DashboardLayout>
+        <DistributorDashboardLayout>
             <DistributorAPILogsCom />
-        </DashboardLayout>
+        </DistributorDashboardLayout>
     )
 }
 
