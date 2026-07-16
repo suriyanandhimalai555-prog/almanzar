@@ -12,67 +12,61 @@ const DistributorTransactionsCom = () => {
     return (
         <div className="max-w-[1400px] mx-auto space-y-8">
 
-            {/* Header Section */}
             <div className="flex justify-between items-start">
                 <div>
-                    <h1 className="text-3xl font-bold text-white mb-2">Transactions</h1>
-                    <div className="flex items-center text-gray-400 text-sm">
+                    <h1 className="text-3xl font-bold text-gray-900 mb-2">Transactions</h1>
+                    <div className="flex items-center text-gray-500 text-sm">
                         <BsArrowLeftRight className="mr-2 text-base" />
                         Card funding & card spend activity
                     </div>
                 </div>
-                <button className="flex items-center gap-2 border border-[#0f3b28] bg-transparent hover:bg-[#031c11] text-white px-4 py-2.5 rounded-xl text-xs font-semibold transition-colors">
-                    <BiRefresh className="text-lg" />
+                <button className="flex items-center gap-2 border border-gray-200 bg-white hover:bg-gray-50 text-gray-700 px-4 py-2.5 rounded-xl text-xs font-semibold transition-colors shadow-sm">
+                    <BiRefresh className="text-lg text-[#2B6CF0]" />
                     Refresh
                 </button>
             </div>
 
-            {/* Action Bar (Filters & Search) */}
             <div className="flex flex-col xl:flex-row justify-between items-start xl:items-center gap-4">
 
-                {/* Filter Pills */}
                 <div className="flex flex-wrap items-center gap-2">
-                    <button className="flex items-center gap-2 bg-[#2ee59d] text-[#02160d] px-4 py-2.5 rounded-full text-xs font-bold transition-all">
+                    <button className="flex items-center gap-2 bg-gradient-to-r from-[#2B6CF0] to-[#1E40AF] text-white px-4 py-2.5 rounded-full text-xs font-bold transition-all shadow-sm">
                         <BsLayers className="text-sm" /> All
                     </button>
-                    <button className="flex items-center gap-2 border border-[#0f3b28] text-gray-300 hover:text-white bg-transparent hover:bg-[#031c11] px-4 py-2.5 rounded-full text-xs font-semibold transition-all">
+                    <button className="flex items-center gap-2 border border-gray-200 text-gray-600 hover:text-[#1E40AF] bg-white hover:bg-blue-50 px-4 py-2.5 rounded-full text-xs font-semibold transition-all shadow-sm">
                         <BsArrowLeftRight className="text-sm" /> Wallet
                     </button>
-                    <button className="flex items-center gap-2 border border-[#0f3b28] text-gray-300 hover:text-white bg-transparent hover:bg-[#031c11] px-4 py-2.5 rounded-full text-xs font-semibold transition-all">
+                    <button className="flex items-center gap-2 border border-gray-200 text-gray-600 hover:text-[#1E40AF] bg-white hover:bg-blue-50 px-4 py-2.5 rounded-full text-xs font-semibold transition-all shadow-sm">
                         <BiWallet className="text-sm" /> Card funding
                     </button>
-                    <button className="flex items-center gap-2 border border-[#0f3b28] text-gray-300 hover:text-white bg-transparent hover:bg-[#031c11] px-4 py-2.5 rounded-full text-xs font-semibold transition-all">
+                    <button className="flex items-center gap-2 border border-gray-200 text-gray-600 hover:text-[#1E40AF] bg-white hover:bg-blue-50 px-4 py-2.5 rounded-full text-xs font-semibold transition-all shadow-sm">
                         <FiCreditCard className="text-sm" /> Card usage
                     </button>
                 </div>
 
-                {/* Search Inputs */}
                 <div className="flex flex-col sm:flex-row items-center gap-3 w-full xl:w-auto">
-                    <div className="flex items-center bg-[#021008] border border-[#0f3b28] rounded-xl px-4 py-2.5 w-full sm:w-[280px] focus-within:border-[#2ee59d] transition-colors group">
-                        <BiSearch className="text-gray-500 group-focus-within:text-[#2ee59d] mr-2 text-lg transition-colors" />
+                    <div className="flex items-center bg-white border border-gray-200 rounded-xl px-4 py-2.5 w-full sm:w-[280px] focus-within:border-[#2B6CF0] focus-within:ring-1 focus-within:ring-[#2B6CF0] transition-all group shadow-sm">
+                        <BiSearch className="text-gray-400 group-focus-within:text-[#2B6CF0] mr-2 text-lg transition-colors" />
                         <input
                             type="text"
                             placeholder="Filter by username / email"
-                            className="bg-transparent w-full outline-none text-white text-xs placeholder-gray-600"
+                            className="bg-transparent w-full outline-none text-gray-900 text-xs placeholder-gray-400"
                         />
                     </div>
-                    <div className="flex items-center bg-[#021008] border border-[#0f3b28] rounded-xl px-4 py-2.5 w-full sm:w-[280px] focus-within:border-[#2ee59d] transition-colors group">
-                        <BiSearch className="text-gray-500 group-focus-within:text-[#2ee59d] mr-2 text-lg transition-colors" />
+                    <div className="flex items-center bg-white border border-gray-200 rounded-xl px-4 py-2.5 w-full sm:w-[280px] focus-within:border-[#2B6CF0] focus-within:ring-1 focus-within:ring-[#2B6CF0] transition-all group shadow-sm">
+                        <BiSearch className="text-gray-400 group-focus-within:text-[#2B6CF0] mr-2 text-lg transition-colors" />
                         <input
                             type="text"
                             placeholder="Filter by card number..."
-                            className="bg-transparent w-full outline-none text-white text-xs placeholder-gray-600"
+                            className="bg-transparent w-full outline-none text-gray-900 text-xs placeholder-gray-400"
                         />
                     </div>
                 </div>
             </div>
 
-            {/* Data Table */}
-            <div className="bg-[#021008] border border-[#0f3b28] rounded-2xl overflow-x-auto">
+            <div className="bg-white border border-gray-200 rounded-2xl overflow-x-auto shadow-sm">
                 <div className="min-w-[900px]">
 
-                    {/* Table Header */}
-                    <div className="grid grid-cols-[1fr_2fr_1fr_1fr_1.5fr_1.5fr_1.5fr] gap-4 px-8 py-5 border-b border-[#0f3b28]/50 text-gray-500 text-[10px] font-bold tracking-widest uppercase">
+                    <div className="grid grid-cols-[1fr_2fr_1fr_1fr_1.5fr_1.5fr_1.5fr] gap-4 px-8 py-4 border-b border-gray-100 bg-gray-50/50 text-gray-500 text-[10px] font-bold tracking-widest uppercase">
                         <div>User</div>
                         <div>Activity</div>
                         <div>Kind</div>
@@ -82,61 +76,51 @@ const DistributorTransactionsCom = () => {
                         <div className="text-right">Date</div>
                     </div>
 
-                    {/* Table Body */}
                     <div className="p-2">
 
-                        {/* Highlighted Row */}
-                        <div className="grid grid-cols-[1fr_2fr_1fr_1fr_1.5fr_1.5fr_1.5fr] items-center gap-4 px-6 py-4 bg-[#031c11] border border-[#0f3b28] rounded-[1rem] hover:bg-[#052618] transition-colors cursor-pointer">
+                        <div className="grid grid-cols-[1fr_2fr_1fr_1fr_1.5fr_1.5fr_1.5fr] items-center gap-4 px-6 py-4 bg-white border border-gray-100 rounded-[1rem] hover:bg-blue-50/50 hover:border-blue-100 transition-colors cursor-pointer mb-1">
 
-                            {/* User Column */}
                             <div className="flex items-center gap-3">
-                                <div className="w-8 h-8 rounded-full bg-[#021008] border border-[#0f3b28] text-[#2ee59d] flex items-center justify-center text-xs font-bold">
+                                <div className="w-8 h-8 rounded-full bg-blue-50 border border-blue-100 text-[#2B6CF0] flex items-center justify-center text-xs font-bold">
                                     ?
                                 </div>
-                                <span className="text-white text-sm font-medium">—</span>
+                                <span className="text-gray-900 text-sm font-bold">—</span>
                             </div>
 
-                            {/* Activity Column */}
                             <div className="flex items-center gap-3">
-                                <div className="bg-[#021008] border border-[#0f3b28] rounded-full p-1.5 text-[#2ee59d]">
+                                <div className="bg-blue-50 border border-blue-100 rounded-full p-1.5 text-[#2B6CF0]">
                                     <BiPlusCircle className="text-sm" />
                                 </div>
-                                <span className="text-white text-sm font-medium">Manual top-up</span>
+                                <span className="text-gray-900 text-sm font-bold">Manual top-up</span>
                             </div>
 
-                            {/* Kind Column */}
                             <div>
-                                <span className="bg-[#021008] border border-[#0f3b28] text-gray-400 text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 rounded">
+                                <span className="bg-gray-100 border border-gray-200 text-gray-600 text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 rounded">
                                     Wallet
                                 </span>
                             </div>
 
-                            {/* Card Column */}
                             <div>
-                                <span className="text-gray-500 text-sm">—</span>
+                                <span className="text-gray-500 text-sm font-medium">—</span>
                             </div>
 
-                            {/* Amount Column */}
                             <div>
-                                <span className="text-white font-bold text-sm tracking-wide">+$5000.00</span>
+                                <span className="text-green-600 font-bold text-sm tracking-wide">+$5000.00</span>
                             </div>
 
-                            {/* Status Column */}
                             <div>
-                                <span className="flex items-center w-max gap-1.5 bg-[#011a11] border border-[#12422e] text-[#2ee59d] text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full">
-                                    <div className="w-1.5 h-1.5 bg-[#2ee59d] rounded-full"></div>
+                                <span className="flex items-center w-max gap-1.5 bg-green-50 border border-green-200 text-green-700 text-[9px] font-bold tracking-widest uppercase px-2.5 py-1 rounded-full">
+                                    <div className="w-1.5 h-1.5 bg-green-500 rounded-full"></div>
                                     Completed
                                 </span>
                             </div>
 
-                            {/* Date Column */}
-                            <div className="text-gray-400 text-xs text-right tracking-wide">
+                            <div className="text-gray-500 text-xs font-medium text-right tracking-wide">
                                 02 Jul 2026, 12:53
                             </div>
 
                         </div>
 
-                        {/* If there are no other transactions, you could place an empty state here or map through more rows as they are added via API. */}
 
                     </div>
                 </div>

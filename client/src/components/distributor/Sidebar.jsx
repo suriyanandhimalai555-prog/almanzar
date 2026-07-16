@@ -8,7 +8,6 @@ import {
     BiCreditCard,
     BiCodeAlt,
     BiFile,
-    BiSun,
     BiLogOut
 } from 'react-icons/bi';
 import { BsBoxSeam, BsGrid1X2Fill } from "react-icons/bs";
@@ -49,24 +48,24 @@ const Sidebar = ({ isOpen, onClose }) => {
             {/* Mobile Overlay Background */}
             {isOpen && (
                 <div
-                    className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 md:hidden"
+                    className="fixed inset-0 bg-gray-900/40 backdrop-blur-sm z-40 md:hidden"
                     onClick={onClose}
                 ></div>
             )}
 
             {/* Sidebar Container */}
-            <div className={`fixed inset-y-0 left-0 z-50 w-[260px] bg-[#021008] border-r border-[#0f3b28] h-screen flex flex-col justify-between transform transition-transform duration-300 ease-in-out md:relative md:translate-x-0 shrink-0 ${isOpen ? 'translate-x-0' : '-translate-x-full'
+            <div className={`fixed inset-y-0 left-0 z-50 w-[260px] bg-white border-r border-gray-200 h-screen flex flex-col justify-between transform transition-transform duration-300 ease-in-out md:relative md:translate-x-0 shrink-0 md:shadow-none shadow-xl ${isOpen ? 'translate-x-0' : '-translate-x-full'
                 }`}>
 
                 <div className="flex-1 overflow-y-auto overflow-x-hidden no-scrollbar">
                     {/* Profile Header */}
-                    <div className="flex items-center justify-between p-5 border-b border-[#0f3b28]/50 sticky top-0 bg-[#021008] z-10">
+                    <div className="flex items-center justify-between p-5 border-b border-gray-200 sticky top-0 bg-white z-10">
                         <div className="flex items-center gap-3">
-                            <div className="bg-[#052618] text-[#2ee59d] p-2 rounded-lg border border-[#0f3b28]">
+                            <div className="bg-gradient-to-br from-[#2B6CF0] to-[#1E40AF] text-white p-2 rounded-lg shadow-sm">
                                 <BsBoxSeam className="text-lg" />
                             </div>
                             <div className="truncate w-32">
-                                <h3 className="text-white text-sm font-semibold leading-tight truncate" title={companyName}>
+                                <h3 className="text-gray-900 text-sm font-bold leading-tight truncate" title={companyName}>
                                     Almanzar Distributor
                                 </h3>
                                 <p className="text-gray-500 text-[10px] font-bold tracking-widest uppercase mt-0.5">Distributor</p>
@@ -75,7 +74,7 @@ const Sidebar = ({ isOpen, onClose }) => {
                         {/* Mobile Close Button */}
                         <button
                             onClick={onClose}
-                            className="md:hidden text-gray-500 hover:text-white transition-colors p-1"
+                            className="md:hidden text-gray-400 hover:text-[#2B6CF0] transition-colors p-1"
                         >
                             <FiX className="text-xl" />
                         </button>
@@ -91,15 +90,15 @@ const Sidebar = ({ isOpen, onClose }) => {
                                     key={index}
                                     to={item.path}
                                     onClick={onClose} // Auto-close sidebar on mobile after clicking
-                                    className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-all ${isActive
-                                        ? 'bg-[#052618] text-[#2ee59d] border border-[#0f3b28]'
-                                        : 'text-gray-300 hover:text-white hover:bg-[#031c11]'
+                                    className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-xl transition-all group ${isActive
+                                        ? 'bg-blue-50 text-[#2B6CF0] border border-blue-100 shadow-sm'
+                                        : 'text-gray-600 hover:text-[#2B6CF0] hover:bg-gray-50 border border-transparent'
                                         }`}
                                 >
-                                    <span className={`text-lg ${isActive ? 'text-[#2ee59d]' : 'text-gray-400'}`}>
+                                    <span className={`text-lg transition-colors ${isActive ? 'text-[#2B6CF0]' : 'text-gray-400 group-hover:text-[#2B6CF0]'}`}>
                                         {item.icon}
                                     </span>
-                                    <span className="font-medium text-[13px]">{item.name}</span>
+                                    <span className="font-semibold text-[13px]">{item.name}</span>
                                 </Link>
                             );
                         })}
@@ -107,13 +106,13 @@ const Sidebar = ({ isOpen, onClose }) => {
                 </div>
 
                 {/* Bottom Actions */}
-                <div className="p-4 space-y-1 border-t border-[#0f3b28]/50 bg-[#021008] shrink-0">
+                <div className="p-4 space-y-1 border-t border-gray-200 bg-white shrink-0">
                     <button
                         onClick={handleLogout}
-                        className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-[#ff5b5b] hover:bg-[#1a0808] transition-all"
+                        className="w-full flex items-center gap-3 px-4 py-2.5 rounded-xl text-red-600 hover:bg-red-50 hover:text-red-700 transition-all font-semibold border border-transparent hover:border-red-100"
                     >
                         <BiLogOut className="text-lg" />
-                        <span className="font-medium text-[13px]">Logout</span>
+                        <span className="text-[13px]">Logout</span>
                     </button>
                 </div>
 
